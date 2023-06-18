@@ -6,10 +6,110 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>QUIZ</title>
     <link rel="icon" type="image/x-icon" href="./img/quiz_logo.png">
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
+    
+    <!-- HEADER -->
+    <header>
+        <h1>QUIZ</h1>
+    </header>
 
+    <main>
+        <!-- RULES AND START -->
+        <section>
+            <div>
+                <h2>Quiz Application Rules:</h2>
+                <ul>
+                    <li>The quiz application consists of a total of 20 questions. Among these questions, 4 are
+                        difficult, 8 are
+                        medium, and 8 are easy level questions.</li>
+                    <li>Each quiz session will contain 5 randomly selected questions. These questions will consist of 1
+                        difficult, 2 medium, and 2 easy questions.</li>
+                    <li>Questions will be scored based on their difficulty levels. Difficult questions are worth 30
+                        points,
+                        medium questions are worth 20 points, and easy questions are worth 15 points.</li>
+                    <li>You have 2 "eliminate one option" lifelines in the quiz application. You can use this lifeline
+                        to
+                        eliminate 3 incorrect options out of the 4 provided.</li>
+                    <li>Additionally, you have 2 "hint" lifelines in the quiz application. You can use this lifeline to
+                        get a
+                        hint for any question you desire.</li>
+                    <li>Points will be awarded for each correct answer. There will be no deduction or awarding of points
+                        for
+                        incorrect answers.</li>
+                    <li>The user's performance will be evaluated based on the accumulated points at the end of the quiz.
+                    </li>
+                    <li>There is no time limit to complete the quiz. You can enter your answers within your desired time
+                        frame.
+                    </li>
+                    <li>Only one answer option can be selected for each question. Selecting multiple answer options will
+                        be
+                        considered invalid.</li>
+                    <li>Only one answer option can be selected for each question. Selecting multiple answer options will
+                        be
+                        considered invalid.</li>
+                </ul>
+                <button>START</button>
+            </div>
+        </section>
+
+        <!-- QUIZ BOX -->
+        <section>
+            <!-- <i class="fa-solid fa-check" style="color: #2e7b35;"></i> -->
+            <!-- <i class="fa-solid fa-xmark" style="color: #2e7b35;"></i> -->
+            <div>
+                <span>1. In which programming language is React.js written?</span>
+            </div>
+            <div>
+                <div>
+                    <span>a) JavaScript</span>
+                    <div><i class="fa-solid fa-check" style="color: #2e7b35;"></i></div>
+                </div>
+                <div>
+                    <span>b) Python</span>
+                    <div><i class="fa-solid fa-xmark" style="color: #2e7b35;"></i></div>
+                </div>
+                <div>
+                    <span>c) Ruby</span>
+                    <div><i class="fa-solid fa-xmark" style="color: #2e7b35;"></i></div>
+                </div>
+                <div>
+                    <span>d) Java</span>
+                    <div><i class="fa-solid fa-xmark" style="color: #2e7b35;"></i></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- QUIZ BOX FOOTER -->
+    <footer>
+        <div>
+            <i class="fa-solid fa-less-than" style="color: #2e7b35;"></i>
+            <button>BACK</button>
+        </div>
+        <div>
+            <button>NEXT</button>
+            <i class="fa-solid fa-greater-than" style="color: #2e7b35;"></i>
+        </div>
+    </footer>
+
+    <!-- RESULT BOX -->
+    <article>
+        <div>
+            <i class="fa-solid fa-burst" style="color: #2e7b35;"></i>
+        </div>
+        <div>You've completed the Quiz!</div>
+        <div>You got only <p>12</p> out of <p>20</p>
+        </div>
+        <div>
+            <button>QUIT</button>
+        </div>
+    </article>
 
     <script src="/script.js"></script>
 </body>
