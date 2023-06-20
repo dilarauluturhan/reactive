@@ -1,0 +1,23 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Noto Sans JP', sans-serif;
+    background: #FEF9E5;
+}
+
+h1,
+h2,
+p,
+span,
+button,
+i {
+    margin-top: 0;
+}
+
+li {
+    list-style: none;
+}
