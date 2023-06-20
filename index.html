@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>QuizReact</title>
     <link rel="icon" type="image/x-icon" href="./img/react.svg">
+    <link rel="stylesheet" href="styles.css">
     <!-- font awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
         integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
@@ -13,7 +14,7 @@
 </head>
 
 <body>
-    
+
     <!-- HEADER -->
     <header>
         <h1><i class="fa-brands fa-react" style="color: #2e7b35;"></i>QuizReact</h1>
@@ -89,22 +90,25 @@
     <!-- QUIZ BOX FOOTER -->
     <footer>
         <div>
-            <i class="fa-solid fa-less-than" style="color: #2e7b35;"></i>
+            <i class="fa-solid fa-angle-left" style="color: #2e7b35;"></i>
             <button>BACK</button>
         </div>
         <div>
             <button>NEXT</button>
-            <i class="fa-solid fa-greater-than" style="color: #2e7b35;"></i>
+            <i class="fa-solid fa-angle-right" style="color: #2e7b35;"></i>
+        </div>
+        <div>
+            <button><i class="fa-solid fa-angle-left" style="color: #2e7b35;"></i><i class="fa-solid fa-angle-right"
+                    style="color: #2e7b35;"></i>RESULTS<i class="fa-solid fa-code" style="color: #2e7b35;"></i></button>
         </div>
     </footer>
 
+    <!-- Soru numaralarını, işaretlediğim şıkkı ve doğru - yanlış cevabı görürüm. ( Doğru işaretlediğim soru numaraları yeşil, yanlışlar kırmızı olur ). -->
+    <!-- Ve burada aldığım puanı görürüm. -->
+
     <!-- RESULT BOX -->
     <article>
-        <div>
-            <i class="fa-solid fa-burst" style="color: #2e7b35;"></i>
-        </div>
         <div>You've completed the Quiz!</div>
-        <div>You got only <p>12</p> out of <p>20</p>
         </div>
         <div>
             <button>QUIT</button>
