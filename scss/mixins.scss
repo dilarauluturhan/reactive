@@ -136,16 +136,18 @@
         user-select: none;
         -webkit-user-select: none;
         touch-action: manipulation;
+
+        &:hover {
+            box-shadow: rgba(0, 0, 0, .3) 2px 8px 8px -5px;
+            transform: translate3d(0, 2px, 0);
+        }
+
+        &:focus {
+            box-shadow: rgba(0, 0, 0, .3) 2px 8px 4px -6px;
+        }
     }
 
-    .start_btn:hover {
-        box-shadow: rgba(0, 0, 0, .3) 2px 8px 8px -5px;
-        transform: translate3d(0, 2px, 0);
-    }
 
-    .start_btn:focus {
-        box-shadow: rgba(0, 0, 0, .3) 2px 8px 4px -6px;
-    }
 }
 
 @mixin quiz_box {
@@ -242,15 +244,15 @@
         position: fixed;
         left: 9%;
         top: 82%;
-    }
 
-    .back_btn:hover {
-        box-shadow: rgba(0, 0, 0, .3) 2px 8px 8px -5px;
-        transform: translate3d(0, 2px, 0);
-    }
+        &:hover {
+            box-shadow: rgba(0, 0, 0, .3) 2px 8px 8px -5px;
+            transform: translate3d(0, 2px, 0);
+        }
 
-    .back_btn:focus {
-        box-shadow: rgba(0, 0, 0, .3) 2px 8px 4px -6px;
+        &:focus {
+            box-shadow: rgba(0, 0, 0, .3) 2px 8px 4px -6px;
+        }
     }
 
     .next_btn {
@@ -285,15 +287,15 @@
         position: fixed;
         left: 80%;
         top: 82%;
-    }
 
-    .next_btn:hover {
-        box-shadow: rgba(0, 0, 0, .3) 2px 8px 8px -5px;
-        transform: translate3d(0, 2px, 0);
-    }
+        &:hover {
+            box-shadow: rgba(0, 0, 0, .3) 2px 8px 8px -5px;
+            transform: translate3d(0, 2px, 0);
+        }
 
-    .next_btn:focus {
-        box-shadow: rgba(0, 0, 0, .3) 2px 8px 4px -6px;
+        &:focus {
+            box-shadow: rgba(0, 0, 0, .3) 2px 8px 4px -6px;
+        }
     }
 
     .result_btn {
@@ -328,16 +330,16 @@
         position: fixed;
         left: 42%;
         top: 82%;
-    }
 
-    .result_btn:hover {
-        box-shadow: rgba(0, 0, 0, .3) 2px 8px 8px -5px;
-        transform: translate3d(0, 2px, 0);
-    }
+        &:hover {
+            box-shadow: rgba(0, 0, 0, .3) 2px 8px 8px -5px;
+            transform: translate3d(0, 2px, 0);
+        }
 
-    .result_btn:focus {
-        box-shadow: rgba(0, 0, 0, .3) 2px 8px 4px -6px;
+        &:focus {
+            box-shadow: rgba(0, 0, 0, .3) 2px 8px 4px -6px;
 
+        }
     }
 }
 
