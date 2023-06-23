@@ -1,0 +1,24 @@
+// Imports
+@import "./reset.scss";
+@import "./variables.scss";
+@import "./mixins.scss";
+
+.hide {
+    display: none;
+}
+
+header{
+    @include header;
+}
+
+.rules_box {
+    @include rules_box;
+}
+
+.quiz_box {
+    @include quiz_box;
+}
+
+.results {
+    @include results;
+}

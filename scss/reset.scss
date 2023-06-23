@@ -6,18 +6,14 @@
 
 body {
     font-family: 'Noto Sans JP', sans-serif;
-    background: #FEF9E5;
+    background: rgb(184, 226, 150);
+    background: linear-gradient(90deg, rgba(184, 226, 150, 1) 34%, rgba(254, 249, 229, 1) 86%);
 }
 
 h1,
-h2,
 p,
 span,
 button,
 i {
     margin-top: 0;
-}
-
-li {
-    list-style: none;
 }
