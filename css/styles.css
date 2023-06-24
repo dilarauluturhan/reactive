@@ -73,6 +73,20 @@ header h1 span {
   -ms-touch-action: manipulation;
       touch-action: manipulation;
 }
+@media screen and (max-width: 800px) {
+  header h1 span {
+    font-size: 2.5rem;
+    font-weight: 400;
+    padding: 1rem;
+  }
+}
+@media screen and (max-width: 500px) {
+  header h1 span {
+    font-size: 2.5rem;
+    font-weight: 400;
+    padding: 1rem;
+  }
+}
 
 .rules_box {
   position: absolute;
@@ -82,9 +96,6 @@ header h1 span {
           transform: translate(-50%, -50%);
 }
 .rules_box .rules_title {
-  color: #41403e;
-  font-size: 1.5rem;
-  font-weight: 600;
   height: 60px;
   width: 100%;
   display: -webkit-box;
@@ -207,6 +218,38 @@ header h1 span {
   -webkit-box-shadow: rgba(0, 0, 0, 0.3) 2px 8px 4px -6px;
           box-shadow: rgba(0, 0, 0, 0.3) 2px 8px 4px -6px;
 }
+@media screen and (max-width: 800px) {
+  .rules_box .rules_title .title {
+    font-size: 1.2rem;
+    font-weight: 500;
+    padding: 0.7rem;
+  }
+  .rules_box .rules_list {
+    width: 550px;
+  }
+  .rules_box .rules_list .rules {
+    font-size: 15px;
+    font-weight: 400;
+  }
+}
+@media screen and (max-width: 500px) {
+  .rules_box .rules_title .title {
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 0.7rem;
+  }
+  .rules_box .rules_list {
+    width: 375px;
+  }
+  .rules_box .rules_list .rules {
+    font-size: 12px;
+    font-weight: 500;
+  }
+  .rules_box .start_btn {
+    font-size: 0.8rem;
+    padding: 0.7rem;
+  }
+}
 
 .quiz_box {
   position: absolute;
@@ -308,7 +351,7 @@ header h1 span {
   -webkit-user-select: none;
   -ms-touch-action: manipulation;
       touch-action: manipulation;
-  position: fixed;
+  position: absolute;
   left: 9%;
   top: 82%;
 }
@@ -359,7 +402,7 @@ header h1 span {
   -webkit-user-select: none;
   -ms-touch-action: manipulation;
       touch-action: manipulation;
-  position: fixed;
+  position: absolute;
   left: 80%;
   top: 82%;
 }
@@ -410,7 +453,7 @@ header h1 span {
   -webkit-user-select: none;
   -ms-touch-action: manipulation;
       touch-action: manipulation;
-  position: fixed;
+  position: absolute;
   left: 42%;
   top: 82%;
 }
@@ -423,6 +466,66 @@ header h1 span {
 .quiz_box .result_btn:focus {
   -webkit-box-shadow: rgba(0, 0, 0, 0.3) 2px 8px 4px -6px;
           box-shadow: rgba(0, 0, 0, 0.3) 2px 8px 4px -6px;
+}
+@media screen and (max-width: 800px) {
+  .quiz_box {
+    width: 430px;
+  }
+  .quiz_box .question {
+    font-size: 15px;
+  }
+  .quiz_box .option {
+    font-size: 15px;
+    width: 400px;
+  }
+  .quiz_box .back_btn {
+    font-size: 0.85rem;
+    padding: 0.6rem;
+    position: absolute;
+    left: 8%;
+  }
+  .quiz_box .result_btn {
+    font-size: 0.85rem;
+    padding: 0.6rem;
+    position: absolute;
+    left: 41%;
+  }
+  .quiz_box .next_btn {
+    font-size: 0.85rem;
+    padding: 0.6rem;
+    position: absolute;
+    left: 79%;
+  }
+}
+@media screen and (max-width: 500px) {
+  .quiz_box {
+    width: 380px;
+  }
+  .quiz_box .question {
+    font-size: 15px;
+  }
+  .quiz_box .option {
+    font-size: 15px;
+    width: 350px;
+  }
+  .quiz_box .back_btn {
+    font-size: 0.85rem;
+    padding: 0.6rem;
+    position: absolute;
+    left: 8%;
+  }
+  .quiz_box .result_btn {
+    font-size: 0.85rem;
+    padding: 0.6rem;
+    position: absolute;
+    left: 40%;
+  }
+  .quiz_box .next_btn {
+    font-size: 0.85rem;
+    padding: 0.6rem;
+    position: absolute;
+    left: 77%;
+  }
 }
 
 .results {
@@ -447,7 +550,7 @@ header h1 span {
   border-collapse: collapse;
   width: 320px;
   height: 170px;
-  position: fixed;
+  position: absolute;
   left: 17%;
   top: 18%;
 }
@@ -506,4 +609,25 @@ header h1 span {
 .results .quit_btn:focus {
   -webkit-box-shadow: rgba(0, 0, 0, 0.3) 2px 8px 4px -6px;
           box-shadow: rgba(0, 0, 0, 0.3) 2px 8px 4px -6px;
+}
+@media screen and (max-width: 600px) {
+  .results {
+    width: 350px;
+  }
+  .results .complete_text {
+    font-size: 18px;
+  }
+  .results .table table {
+    width: 300px;
+    position: absolute;
+    left: 7%;
+    top: 18%;
+  }
+  .results .table table td {
+    font-size: 16px;
+  }
+  .results .quit_btn {
+    font-size: 0.9rem;
+    padding: 0.7rem;
+  }
 }

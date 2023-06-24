@@ -7,18 +7,169 @@
     display: none;
 }
 
-header{
+header {
     @include header;
+
+    @include mediaQuery(800px) {
+        h1 {
+            span {
+                font-size: 2.5rem;
+                font-weight: 400;
+                padding: 1rem;
+            }
+        }
+    }
+
+    @include mediaQuery(500px) {
+        h1 {
+            span {
+                font-size: 2.5rem;
+                font-weight: 400;
+                padding: 1rem;
+            }
+        }
+    }
 }
 
 .rules_box {
     @include rules_box;
+
+    @include mediaQuery(800px) {
+        .rules_title .title {
+            font-size: 1.2rem;
+            font-weight: 500;
+            padding: 0.7rem;
+        }
+
+        .rules_list {
+            width: 550px;
+        }
+
+        .rules_list .rules {
+            font-size: 15px;
+            font-weight: 400;
+        }
+    }
+
+    @include mediaQuery(500px) {
+        .rules_title .title {
+            font-size: 1rem;
+            font-weight: 500;
+            padding: 0.7rem;
+        }
+
+        .rules_list {
+            width: 375px;
+        }
+
+        .rules_list .rules {
+            font-size: 12px;
+            font-weight: 500;
+        }
+
+        .start_btn {
+            font-size: 0.80rem;
+            padding: 0.7rem;
+        }
+    }
 }
 
 .quiz_box {
     @include quiz_box;
+
+    @include mediaQuery(800px) {
+        width: 430px;
+
+        .question {
+            font-size: 15px;
+        }
+
+        .option {
+            font-size: 15px;
+            width: 400px;
+        }
+
+        .back_btn {
+            font-size: 0.85rem;
+            padding: 0.6rem;
+            position: absolute;
+            left: 8%;
+        }
+
+        .result_btn {
+            font-size: 0.85rem;
+            padding: 0.6rem;
+            position: absolute;
+            left: 41%;
+        }
+
+        .next_btn {
+            font-size: 0.85rem;
+            padding: 0.6rem;
+            position: absolute;
+            left: 79%;
+        }
+    }
+
+    @include mediaQuery(500px) {
+        width: 380px;
+
+        .question {
+            font-size: 15px;
+        }
+
+        .option {
+            font-size: 15px;
+            width: 350px;
+        }
+
+        .back_btn {
+            font-size: 0.85rem;
+            padding: 0.6rem;
+            position: absolute;
+            left: 8%;
+        }
+
+        .result_btn {
+            font-size: 0.85rem;
+            padding: 0.6rem;
+            position: absolute;
+            left: 40%;
+        }
+
+        .next_btn {
+            font-size: 0.85rem;
+            padding: 0.6rem;
+            position: absolute;
+            left: 77%;
+        }
+    }
 }
 
 .results {
     @include results;
+
+    @include mediaQuery(600px) {
+        width: 350px;
+
+        .complete_text {
+            font-size: 18px;
+        }
+
+        .table table {
+            width: 300px;
+            position: absolute;
+            left: 7%;
+            top: 18%;
+        }
+
+        .table table td {
+            font-size: 16px;
+        }
+
+        .quit_btn{
+            font-size: 0.9rem;
+            padding: 0.7rem;
+        }
+    }
 }

@@ -45,9 +45,6 @@
     transform: translate(-50%, -50%);
 
     .rules_title {
-        color: $textColor;
-        font-size: 1.5rem;
-        font-weight: 600;
         height: 60px;
         width: 100%;
         display: flex;
@@ -126,7 +123,7 @@
         font-weight: 600;
         line-height: 23px;
         outline: none;
-        padding: .75rem;
+        padding: 0.75rem;
         text-decoration: none;
         transition: all 235ms ease-in-out;
         border-bottom-left-radius: 15px 255px;
@@ -241,7 +238,7 @@
         user-select: none;
         -webkit-user-select: none;
         touch-action: manipulation;
-        position: fixed;
+        position: absolute;
         left: 9%;
         top: 82%;
 
@@ -284,7 +281,7 @@
         user-select: none;
         -webkit-user-select: none;
         touch-action: manipulation;
-        position: fixed;
+        position: absolute;
         left: 80%;
         top: 82%;
 
@@ -327,7 +324,7 @@
         user-select: none;
         -webkit-user-select: none;
         touch-action: manipulation;
-        position: fixed;
+        position: absolute;
         left: 42%;
         top: 82%;
 
@@ -365,7 +362,7 @@
         border-collapse: collapse;
         width: 320px;
         height: 170px;
-        position: fixed;
+        position: absolute;
         left: 17%;
         top: 18%;
     }
@@ -408,14 +405,20 @@
         position: fixed;
         left: 44%;
         top: 77%;
-    }
 
-    .quit_btn:hover {
-        box-shadow: rgba(0, 0, 0, .3) 2px 8px 8px -5px;
-        transform: translate3d(0, 2px, 0);
-    }
+        &:hover {
+            box-shadow: rgba(0, 0, 0, .3) 2px 8px 8px -5px;
+            transform: translate3d(0, 2px, 0);
+        }
 
-    .quit_btn:focus {
-        box-shadow: rgba(0, 0, 0, .3) 2px 8px 4px -6px;
+        &:focus {
+            box-shadow: rgba(0, 0, 0, .3) 2px 8px 4px -6px;
+        }
+    }
+}
+
+@mixin mediaQuery($max) {
+    @media screen and (max-width: $max) {
+        @content;
     }
 }
