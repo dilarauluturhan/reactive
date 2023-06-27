@@ -119,11 +119,11 @@
         cursor: pointer;
         display: inline-block;
         font-family: 'Noto Sans JP', sans-serif;
-        font-size: 1rem;
+        font-size: 1.2rem;
         font-weight: 600;
         line-height: 23px;
         outline: none;
-        padding: 0.75rem;
+        padding: 1rem;
         text-decoration: none;
         transition: all 235ms ease-in-out;
         border-bottom-left-radius: 15px 255px;
@@ -181,32 +181,46 @@
         justify-content: space-between;
         cursor: pointer;
         transition: all 0.3s ease;
+        position: relative;
+        overflow: hidden;
+
+        &:hover {
+            background-color: $cream;
+        }
     }
 
-    .option:hover {
-        background-color: $cream;
+    .option .correct {
+        color: $cream;
+
+        &::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 100%;
+            background-color: $correct;
+            z-index: -1;
+        }
     }
 
-    .option .icon {
-        height: 26px;
-        width: 26px;
-        border: 2px solid transparent;
-        border-radius: 50%;
-        text-align: center;
-        font-size: 19px;
-        line-height: 22px;
+    .option .wrong {
+        color: $cream;
+
+        &::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 100%;
+            background-color: $cross;
+            z-index: -1;
+        }
     }
 
-    .option .tick {
-        color: $darkGreen;
-        border-color: $darkGreen;
-        background: $cream;
-    }
-
-    .option .cross {
-        color: $cross;
-        border-color: $cross;
-        background: $cream;
+    .option .alreadyAnswered{
+        pointer-events: none;
     }
 
     .back_btn {
@@ -224,11 +238,11 @@
         color: $textColor;
         cursor: pointer;
         display: inline-block;
-        font-size: 1rem;
+        font-size: 1.2rem;
         font-weight: 600;
         line-height: 23px;
         outline: none;
-        padding: 0.75rem;
+        padding: 1rem;
         text-decoration: none;
         transition: all 235ms ease-in-out;
         border-bottom-left-radius: 15px 255px;
@@ -239,8 +253,8 @@
         -webkit-user-select: none;
         touch-action: manipulation;
         position: absolute;
-        left: 9%;
-        top: 82%;
+        left: 20%;
+        top: 80%;
 
         &:hover {
             box-shadow: rgba(0, 0, 0, .3) 2px 8px 8px -5px;
@@ -267,11 +281,11 @@
         color: $textColor;
         cursor: pointer;
         display: inline-block;
-        font-size: 1rem;
+        font-size: 1.2rem;
         font-weight: 600;
         line-height: 23px;
         outline: none;
-        padding: 0.75rem;
+        padding: 1rem;
         text-decoration: none;
         transition: all 235ms ease-in-out;
         border-bottom-left-radius: 15px 255px;
@@ -282,8 +296,8 @@
         -webkit-user-select: none;
         touch-action: manipulation;
         position: absolute;
-        left: 80%;
-        top: 82%;
+        left: 65%;
+        top: 80%;
 
         &:hover {
             box-shadow: rgba(0, 0, 0, .3) 2px 8px 8px -5px;
@@ -292,50 +306,6 @@
 
         &:focus {
             box-shadow: rgba(0, 0, 0, .3) 2px 8px 4px -6px;
-        }
-    }
-
-    .result_btn {
-        align-self: center;
-        background-color: $cream;
-        background-image: none;
-        background-position: 0 90%;
-        background-repeat: repeat no-repeat;
-        background-size: 4px 3px;
-        border-radius: 15px 225px 255px 15px 15px 255px 225px 15px;
-        border-style: solid;
-        border-width: 2px;
-        box-shadow: rgba(0, 0, 0, .2) 15px 28px 25px -18px;
-        box-sizing: border-box;
-        color: $textColor;
-        cursor: pointer;
-        display: inline-block;
-        font-size: 1rem;
-        font-weight: 600;
-        line-height: 23px;
-        outline: none;
-        padding: .75rem;
-        text-decoration: none;
-        transition: all 235ms ease-in-out;
-        border-bottom-left-radius: 15px 255px;
-        border-bottom-right-radius: 225px 15px;
-        border-top-left-radius: 255px 15px;
-        border-top-right-radius: 15px 225px;
-        user-select: none;
-        -webkit-user-select: none;
-        touch-action: manipulation;
-        position: absolute;
-        left: 42%;
-        top: 82%;
-
-        &:hover {
-            box-shadow: rgba(0, 0, 0, .3) 2px 8px 8px -5px;
-            transform: translate3d(0, 2px, 0);
-        }
-
-        &:focus {
-            box-shadow: rgba(0, 0, 0, .3) 2px 8px 4px -6px;
-
         }
     }
 }

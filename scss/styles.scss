@@ -46,16 +46,16 @@ header {
         }
 
         .rules_list .rules {
-            font-size: 15px;
+            font-size: 16px;
             font-weight: 400;
         }
     }
 
     @include mediaQuery(500px) {
         .rules_title .title {
-            font-size: 1rem;
+            font-size: 1.1rem;
             font-weight: 500;
-            padding: 0.7rem;
+            padding: 0.9rem;
         }
 
         .rules_list {
@@ -63,13 +63,13 @@ header {
         }
 
         .rules_list .rules {
-            font-size: 12px;
+            font-size: 13px;
             font-weight: 500;
         }
 
         .start_btn {
-            font-size: 0.80rem;
-            padding: 0.7rem;
+            font-size: 1rem;
+            padding: 0.8rem;
         }
     }
 }
@@ -81,33 +81,25 @@ header {
         width: 430px;
 
         .question {
-            font-size: 15px;
+            font-size: 18px;
         }
 
         .option {
-            font-size: 15px;
+            font-size: 16px;
             width: 400px;
         }
 
         .back_btn {
-            font-size: 0.85rem;
-            padding: 0.6rem;
+            font-size: 1rem;
+            padding: 1rem;
             position: absolute;
-            left: 8%;
+            left: 18%;
         }
-
-        .result_btn {
-            font-size: 0.85rem;
-            padding: 0.6rem;
-            position: absolute;
-            left: 41%;
-        }
-
         .next_btn {
-            font-size: 0.85rem;
-            padding: 0.6rem;
+            font-size: 1rem;
+            padding: 1rem;
             position: absolute;
-            left: 79%;
+            left: 65%;
         }
     }
 
@@ -115,33 +107,26 @@ header {
         width: 380px;
 
         .question {
-            font-size: 15px;
+            font-size: 18px;
         }
 
         .option {
-            font-size: 15px;
+            font-size: 16px;
             width: 350px;
         }
 
         .back_btn {
-            font-size: 0.85rem;
-            padding: 0.6rem;
+            font-size: 1rem;
+            padding: 0.9rem;
             position: absolute;
-            left: 8%;
-        }
-
-        .result_btn {
-            font-size: 0.85rem;
-            padding: 0.6rem;
-            position: absolute;
-            left: 40%;
+            left: 18%;
         }
 
         .next_btn {
-            font-size: 0.85rem;
-            padding: 0.6rem;
+            font-size: 1rem;
+            padding: 0.9rem;
             position: absolute;
-            left: 77%;
+            left: 62%;
         }
     }
 }

@@ -11,10 +11,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500&display=swap" rel="stylesheet">
-    <!-- font awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
@@ -51,48 +47,28 @@
                         will help you better understand the question.</div>
                     <div class="rules">9. You will earn points for each correct answer, and incorrect answers will not
                         affect your score.</div>
-                    <div class="rules">10. In the end, the scores of the correctly answered questions will be totaled, and
+                    <div class="rules">10. In the end, the scores of the correctly answered questions will be totaled,
+                        and
                         your overall score will be displayed.</div>
                 </div>
-                <div class="buttons"><button class="start_btn" role="button">START</button></div>
+                <div class="buttons"><button class="start_btn" onclick="start()" role="button">START</button></div>
             </div>
         </section>
 
         <!-- QUIZ BOX -->
         <section>
-            <!-- <i class="fa-solid fa-check"></i> -->
-            <!-- <i class="fa-solid fa-xmark"></i> -->
             <div class="quiz_box hide">
                 <div class="question">
-                    <span>1. In which programming language is React.js written?</span>
                 </div>
                 <div class="option_list">
-                    <div class="option">
-                        <span>a) JavaScript</span>
-                        <div class="icon tick"><i class="fa-solid fa-check"></i></div>
-                    </div>
-                    <div class="option">
-                        <span>b) Python</span>
-                        <div class="icon cross"><i class="fa-solid fa-xmark"></i></div>
-                    </div>
-                    <div class="option">
-                        <span>c) Ruby</span>
-                        <div class="icon cross"><i class="fa-solid fa-xmark"></i></div>
-                    </div>
-                    <div class="option">
-                        <span>d) Java</span>
-                        <div class="icon cross"><i class="fa-solid fa-xmark"></i></div>
-                    </div>
-                    <button class="back_btn" role="button">BACK</button>
-                    <button class="result_btn" role="button">RESULTS</button>
-                    <button class="next_btn" role="button">NEXT</button>
+                </div>
+                <div>
+                    <button class="back_btn" onclick="back()" role="button">BACK</button>
+                    <button class="next_btn" onclick="next()" role="button">NEXT</button>
                 </div>
             </div>
         </section>
     </main>
-
-    <!-- Soru numaralarını, işaretlediğim şıkkı ve doğru - yanlış cevabı görürüm.
-        ( Doğru işaretlediğim soru numaraları yeşil, yanlışlar kırmızı olur ). -->
 
     <!-- RESULT BOX -->
     <footer>
@@ -102,33 +78,35 @@
                 <table>
                     <tr>
                         <td>Total Questions</td>
-                        <td>20</td>
+                        <td class="totalQuestion"></td>
                     </tr>
                     <tr>
                         <td>Attempt</td>
-                        <td>20</td>
+                        <td class="totalAttempt"></td>
                     </tr>
                     <tr>
                         <td>Correct</td>
-                        <td>15</td>
+                        <td class="totalCorrect"></td>
                     </tr>
                     <tr>
                         <td>Wrong</td>
-                        <td>5</td>
+                        <td class="totalWrong"></td>
                     </tr>
                     <tr>
                         <td>Score</td>
-                        <td>200</td>
+                        <td class="totalScore"></td>
                     </tr>
                 </table>
             </div>
             <div>
-                <button class="quit_btn" role="button">QUIT</button>
+                <button class="quit_btn" onclick="quitButton()" role="button">QUIT</button>
             </div>
         </div>
     </footer>
 
+    <script src="/question.js"></script>
     <script src="/script.js"></script>
+
 </body>
 
 </html>
