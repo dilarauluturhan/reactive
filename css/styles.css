@@ -262,7 +262,7 @@ header h1 span {
   background: #FEF9E5;
   border: none;
   border-radius: 5px;
-  padding: 20px 15px;
+  padding: 25px 25px;
 }
 .quiz_box .question {
   font-size: 17px;
@@ -479,8 +479,8 @@ header h1 span {
 
 .results {
   background-color: #FEF9E5;
-  width: 500px;
-  height: 330px;
+  width: 600px;
+  height: 400px;
   border: none;
   border-radius: 5px;
   position: absolute;
@@ -491,22 +491,22 @@ header h1 span {
 }
 .results .complete_text {
   text-align: center;
-  font-size: 20px;
+  font-size: 25px;
   font-weight: 500;
   padding: 10px 0;
 }
 .results .table table {
   border-collapse: collapse;
-  width: 320px;
-  height: 170px;
+  width: 400px;
+  height: 200px;
   position: absolute;
   left: 17%;
   top: 18%;
 }
 .results .table table td {
-  border: 1px solid #41403e;
+  border: 2px solid #41403e;
   text-align: center;
-  font-size: 17px;
+  font-size: 18px;
 }
 .results .quit_btn {
   -ms-flex-item-align: center;
@@ -527,11 +527,11 @@ header h1 span {
   color: #41403e;
   cursor: pointer;
   display: inline-block;
-  font-size: 1rem;
+  font-size: 1.2rem;
   font-weight: 600;
   line-height: 23px;
   outline: none;
-  padding: 0.75rem;
+  padding: 1rem;
   text-decoration: none;
   -webkit-transition: all 235ms ease-in-out;
   transition: all 235ms ease-in-out;
