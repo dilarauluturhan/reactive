@@ -75,12 +75,25 @@ function unclickableOptions() {
     }
 }
 
-/*******************************************************/
+// bu fonksiyon bir önceki soruya getirir
 function back() {
-    console.log("back!");
-    
+    if (questionCounter > 0) {
+        questionCounter--; // soru sayacını bir azaltır
+        currentQuestion = availableQuestions[questionCounter]; // mevcut soruyu günceller
+        questionText.innerHTML = currentQuestion.question; // soru metnini günceller
+        optionList.innerHTML = ''; // yeni soruya geçerken önceki sorunun şıklarını temizler
+
+        const optionLength = currentQuestion.options.length;
+        for (let i = 0; i < optionLength; i++) {
+            const option = document.createElement("div");
+            option.innerHTML = currentQuestion.options[i];
+            option.id = i;
+            option.className = "option";
+            optionList.appendChild(option);
+            option.setAttribute("onclick", "getResult(this)");
+        }
+    }
 }
-/*******************************************************/
 
 // bu fonksiyon tüm sorular cevaplandıysa quizOver()'ı bir sonraki soruyu almak içinse getNewQuestion()'ı çağırır
 function next() {
