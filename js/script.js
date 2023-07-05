@@ -7,7 +7,6 @@ const resultBox = document.querySelector('.results');
 
 let questionCounter = 0; // Kullanıcının kaçıncı soruda olduğunu takip etmek için.. Sorular ilerledikçe bu değer artar
 let currentQuestion; // Şu anda görüntülenen soruyu temsil eder, her soru gösterildiğinde bu değişken güncellenir
-let currentQuestionIndex = 0; // Şu anda hangi sorunun görüntülendiğini takip etmek için.. Soruların dizideki indeksini temsil eder
 let availableQuestions = []; // Bu dizi soruların listesini tutar, başlangıçta boştur ancak quiz başladığında sorular bu diziye eklenir
 let availableOptions = []; // Bu dizi şu anda görüntülenen sorunun seçeneklerini tutar her soru gösterildiğinde seçenekler bu diziye eklenir
 let correctAnswers = 0; // Doğru cevap sayısını takip etmek için.. Kullanıcı doğru cevap verdiğinde değer artar
@@ -21,34 +20,30 @@ function setAvailableQuestions() {
     }
 }
 
-// bu fonksiyon rastgele soru seçer, rastgele şık sıralar, şıkları günceller ve tıklanan şıkka göre sonucu render eden getResult'ı çağırır
 function getNewQuestion() {
-    const questionIndex = availableQuestions[Math.floor(Math.random() * availableQuestions.length)]; // rastgele soru gelmesi için rastgele bir indeks alır
-    currentQuestion = questionIndex; // seçilen soruyu currentQuestion'a atar
-    questionText.innerHTML = currentQuestion.question; // questionText'i currentQuestion'ın question'ıyla günceller
-    const index1 = availableQuestions.indexOf(questionIndex); // availableQuestions dizisinde seçilen sorunun indeksini bulur ve index1 değişkenine atar
-    availableQuestions.splice(index1, 1); // availableQuestions dizisinden seçilen soruyu çıkarır
-    const optionLength = currentQuestion.options.length; // Seçilen sorunun seçeneklerinin length'ini optionLength değişkenine atar
-    for (let i = 0; i < optionLength; i++) {
-        availableOptions.push(i); // availableOptions'a şıkların indeksini ekler
+    //  mevcut soru sayısının mevcut soru listesinin length'ine eşit veya büyük olduğunu kontrol eder, böylece quizOver fonksiyonunu çağırıp fonksiyondan çıkar
+    if (questionCounter >= availableQuestions.length) {
+        quizOver();
+        return;
     }
 
-    optionList.innerHTML = ''; // Seçenek listesini temizler
+    currentQuestion = availableQuestions[questionCounter]; // mevcut soruyu belirler
+    questionText.innerHTML = currentQuestion.question; // questionText'in içeriğini mevcut sorunun metnini içerecek şekilde günceller
 
-    // her şık için for döngüsü..
+    const optionLength = currentQuestion.options.length; // mevcut sorunun seçeneklerinin uzunluğunu atar
+    optionList.innerHTML = ''; // elementin içeriğini temizler yani önceki sorunun şıklarını kaldırır
+
+    // for döngüsü mevcut sorunun seçeneklerini tek tek döner
     for (let i = 0; i < optionLength; i++) {
-        const optionIndex = availableOptions[Math.floor(Math.random() * availableOptions.length)];
-        const index2 = availableOptions.indexOf(optionIndex);
-        availableOptions.splice(index2, 1);
         const option = document.createElement("div");
-        option.innerHTML = currentQuestion.options[optionIndex]; // <div> öğesinin içeriğini currentQuestion'ın options'ındaki seçeneğe göre günceller.
-        option.id = optionIndex;
+        option.innerHTML = currentQuestion.options[i];
+        option.id = i;
         option.className = "option";
-        optionList.appendChild(option); // option'ı optionList'e ekler
+        optionList.appendChild(option);
         option.setAttribute("onclick", "getResult(this)");
     }
 
-    questionCounter++; // soru sayacını bir arttırır
+    questionCounter++; // mevcut sorunun sayacını bir arttırır
 }
 
 /***********correct ve wrong'un css kodları çalışmıyo************/
@@ -83,12 +78,7 @@ function unclickableOptions() {
 /*******************************************************/
 function back() {
     console.log("back!");
-    if (currentQuestionIndex <= 0) {
-        return; // geri gidilecek bir önceki soru yok
-    }
-
-    currentQuestionIndex--;
-    getNewQuestion();
+    
 }
 /*******************************************************/
 
