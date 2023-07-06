@@ -115,7 +115,7 @@ function quizResult() {
     resultBox.querySelector(".totalAttempt").innerHTML = attempt;
     resultBox.querySelector(".totalCorrect").innerHTML = correctAnswers;
     resultBox.querySelector(".totalWrong").innerHTML = attempt - correctAnswers;
-    resultBox.querySelector(".totalScore").innerHTML = correctAnswers + " / " + quiz.length;
+    resultBox.querySelector(".totalScore").innerHTML = quiz.length + " / " + correctAnswers;
 }
 
 function resetQuiz() {
