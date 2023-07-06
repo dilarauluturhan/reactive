@@ -297,33 +297,33 @@ header h1 span {
 .quiz_box .option:hover {
   background-color: #FEF9E5;
 }
-.quiz_box .option .correct {
+.quiz_box .correct {
   color: #FEF9E5;
-}
-.quiz_box .option .correct::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0;
-  height: 100%;
-  width: 100%;
   background-color: #0A6EBD;
-  z-index: -1;
 }
-.quiz_box .option .wrong {
-  color: #FEF9E5;
-}
-.quiz_box .option .wrong::before {
+.quiz_box .correct::before {
   content: "";
   position: absolute;
   left: 0;
   top: 0;
   height: 100%;
   width: 100%;
-  background-color: #B31312;
   z-index: -1;
 }
-.quiz_box .option .alreadyAnswered {
+.quiz_box .wrong {
+  color: #FEF9E5;
+  background-color: #B31312;
+}
+.quiz_box .wrong::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+}
+.quiz_box .alreadyAnswered {
   pointer-events: none;
 }
 .quiz_box .back_btn {

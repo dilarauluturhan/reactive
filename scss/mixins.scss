@@ -187,10 +187,12 @@
         &:hover {
             background-color: $cream;
         }
+
     }
 
-    .option .correct {
+    .correct {
         color: $cream;
+        background-color: $correct;
 
         &::before {
             content: '';
@@ -199,13 +201,13 @@
             top: 0;
             height: 100%;
             width: 100%;
-            background-color: $correct;
             z-index: -1;
         }
     }
 
-    .option .wrong {
+    .wrong {
         color: $cream;
+        background-color: $cross;
 
         &::before {
             content: '';
@@ -214,12 +216,11 @@
             top: 0;
             height: 100%;
             width: 100%;
-            background-color: $cross;
             z-index: -1;
         }
     }
 
-    .option .alreadyAnswered {
+    .alreadyAnswered {
         pointer-events: none;
     }
 

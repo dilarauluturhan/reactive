@@ -46,13 +46,13 @@ function getNewQuestion() {
     questionCounter++; // mevcut sorunun sayacını bir arttırır
 }
 
-/***********correct ve wrong'un css kodları çalışmıyo************/
+/***********correct ve wrong'un scss kodları çalışmıyo************/
 function getResult(element) {
     const id = parseInt(element.id); // tıklanan şıkkın id'sini alır
     if (id === currentQuestion.answer) {
         element.classList.add("correct"); // tıklanan seçeneğin id'si doğru cevaba eşitse "correct" class'ını ekler
         correctAnswers++;
-        // console.log("correct:" + correctAnswers)
+        console.log("correct:" + correctAnswers)
     } else {
         element.classList.add("wrong"); // tıklanan seçeneğin id'si doğru cevaba eşit değilse "wrong" class'ını ekler
         const optionLength = optionList.children.length;
@@ -67,7 +67,7 @@ function getResult(element) {
     unclickableOptions(); // şıklara bir kere tıkladıktan sonra diğerlerini tıklanamaz hale getirir
 }
 
-/*******alreadyAnswered'ın css kodları çalışmıyo********/
+/*******alreadyAnswered'ın scss kodları çalışmıyo********/
 function unclickableOptions() {
     const optionLength = optionList.children.length; // şıkların sayısını optionLength'e atar
     for (let i = 0; i < optionLength; i++) {
