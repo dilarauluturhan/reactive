@@ -21,5 +21,8 @@ git clone https://github.com/dilarauluturhan/reactive.git
 ## Usage✨
 You must download Prepros to run SCSS codes. Then drag and drop the project into Prepros. Then you should open the cloned project in Visual Studio Code. With the Prepros application open, you can see the project at the port ``http://localhost:8848`` with ``CTRL + L``.
 
+## Live✨
+[https://reactive-quiz-app.vercel.app](https://reactive-quiz-app.vercel.app)
+
 ## Contact With✨
 Dilara Uluturhan - [LinkedIn](https://www.linkedin.com/in/dilarauluturhan/) - dilarauluturhan@outlook.com
