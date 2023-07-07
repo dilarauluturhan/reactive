@@ -44,9 +44,16 @@ function getNewQuestion() {
     }
 
     questionCounter++; // mevcut sorunun sayacını bir arttırır
+
+    const warnBox = document.querySelector('#warningBox');
+    if (currentQuestion.level) {
+        warnBox.textContent = currentQuestion.level + " Level";
+        warnBox.classList.add("show");
+    } else {
+        warnBox.classList.remove("show");
+    }
 }
 
-/***********correct ve wrong'un scss kodları çalışmıyo************/
 function getResult(element) {
     const id = parseInt(element.id); // tıklanan şıkkın id'sini alır
     if (id === currentQuestion.answer) {
@@ -67,7 +74,6 @@ function getResult(element) {
     unclickableOptions(); // şıklara bir kere tıkladıktan sonra diğerlerini tıklanamaz hale getirir
 }
 
-/*******alreadyAnswered'ın scss kodları çalışmıyo********/
 function unclickableOptions() {
     const optionLength = optionList.children.length; // şıkların sayısını optionLength'e atar
     for (let i = 0; i < optionLength; i++) {
@@ -116,6 +122,9 @@ function quizResult() {
     resultBox.querySelector(".totalCorrect").innerHTML = correctAnswers;
     resultBox.querySelector(".totalWrong").innerHTML = attempt - correctAnswers;
     resultBox.querySelector(".totalScore").innerHTML = quiz.length + " / " + correctAnswers;
+
+    const warnBox = document.querySelector('#warningBox');
+    warnBox.classList.remove("show");
 }
 
 function resetQuiz() {
