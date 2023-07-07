@@ -301,27 +301,9 @@ header h1 span {
   color: #FEF9E5;
   background-color: #0A6EBD;
 }
-.quiz_box .correct::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0;
-  height: 100%;
-  width: 100%;
-  z-index: -1;
-}
 .quiz_box .wrong {
   color: #FEF9E5;
   background-color: #B31312;
-}
-.quiz_box .wrong::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0;
-  height: 100%;
-  width: 100%;
-  z-index: -1;
 }
 .quiz_box .alreadyAnswered {
   pointer-events: none;
@@ -438,6 +420,8 @@ header h1 span {
   .quiz_box .option {
     font-size: 16px;
     width: 400px;
+    -ms-touch-action: manipulation;
+        touch-action: manipulation;
   }
   .quiz_box .back_btn {
     font-size: 1rem;
@@ -451,6 +435,14 @@ header h1 span {
     position: absolute;
     left: 65%;
   }
+  .quiz_box .correct {
+    color: #FEF9E5;
+    background-color: #0A6EBD;
+  }
+  .quiz_box .wrong {
+    color: #FEF9E5;
+    background-color: #B31312;
+  }
 }
 @media screen and (max-width: 500px) {
   .quiz_box {
@@ -462,6 +454,8 @@ header h1 span {
   .quiz_box .option {
     font-size: 16px;
     width: 350px;
+    -ms-touch-action: manipulation;
+        touch-action: manipulation;
   }
   .quiz_box .back_btn {
     font-size: 1rem;

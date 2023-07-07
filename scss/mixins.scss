@@ -193,31 +193,11 @@
     .correct {
         color: $cream;
         background-color: $correct;
-
-        &::before {
-            content: '';
-            position: absolute;
-            left: 0;
-            top: 0;
-            height: 100%;
-            width: 100%;
-            z-index: -1;
-        }
     }
 
     .wrong {
         color: $cream;
         background-color: $cross;
-
-        &::before {
-            content: '';
-            position: absolute;
-            left: 0;
-            top: 0;
-            height: 100%;
-            width: 100%;
-            z-index: -1;
-        }
     }
 
     .alreadyAnswered {

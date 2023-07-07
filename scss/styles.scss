@@ -87,6 +87,7 @@ header {
         .option {
             font-size: 16px;
             width: 400px;
+            touch-action: manipulation;
         }
 
         .back_btn {
@@ -95,11 +96,22 @@ header {
             position: absolute;
             left: 18%;
         }
+
         .next_btn {
             font-size: 1rem;
             padding: 1rem;
             position: absolute;
             left: 65%;
+        }
+
+        .correct {
+            color: $cream;
+            background-color: $correct;
+        }
+
+        .wrong {
+            color: $cream;
+            background-color: $cross;
         }
     }
 
@@ -113,6 +125,7 @@ header {
         .option {
             font-size: 16px;
             width: 350px;
+            touch-action: manipulation;
         }
 
         .back_btn {
@@ -152,7 +165,7 @@ header {
             font-size: 16px;
         }
 
-        .quit_btn{
+        .quit_btn {
             font-size: 0.9rem;
             padding: 0.7rem;
         }
