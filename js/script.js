@@ -73,10 +73,8 @@ function getResult(element) {
         }
     }
     attempt++; // çözülen soru sayısı birer artar
-    
+
 }
-
-
 
 // bu fonksiyon bir önceki soruya getirir
 function back() {

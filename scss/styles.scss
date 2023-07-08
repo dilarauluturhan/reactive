@@ -7,12 +7,63 @@
     display: none;
 }
 
-@include warning;
+
+body {
+    @include warning;
+
+    @include mediaQuery(1500px) {
+        .warning_box {
+            position: fixed;
+            left: 45%;
+            top: 15%;
+            transform: translate(-5%, -20%);
+        }
+    }
+
+    @include mediaQuery(1400px) {
+        .warning_box {
+            position: fixed;
+            left: 45%;
+            top: 15%;
+            transform: translate(-7%, -20%);
+        }
+    }
+    @include mediaQuery(1150px) {
+        .warning_box {
+            position: fixed;
+            left: 45%;
+            top: 15%;
+            transform: translate(-15%, -20%);
+        }
+    }
+    @include mediaQuery(900px) {
+        .warning_box {
+            position: fixed;
+            left: 45%;
+            top: 15%;
+            transform: translate(-20%, -20%);
+        }
+    }
+
+    @include mediaQuery(768px) {
+        .warning_box {
+            display: none;
+        }
+    }
+
+    @include mediaQuery(600px) {
+        background-image: none;
+        background-color: $lightGreen;
+        background-position: 0 90%;
+        background-repeat: repeat no-repeat;
+        background-size: 4px 3px;
+    }
+}
 
 header {
     @include header;
 
-    @include mediaQuery(800px) {
+    @include mediaQuery(768px) {
         h1 {
             span {
                 font-size: 2.5rem;
@@ -22,7 +73,7 @@ header {
         }
     }
 
-    @include mediaQuery(500px) {
+    @include mediaQuery(600px) {
         h1 {
             span {
                 font-size: 2.5rem;
@@ -36,7 +87,7 @@ header {
 .rules_box {
     @include rules_box;
 
-    @include mediaQuery(800px) {
+    @include mediaQuery(768px) {
         .rules_title .title {
             font-size: 1.2rem;
             font-weight: 500;
@@ -53,7 +104,7 @@ header {
         }
     }
 
-    @include mediaQuery(500px) {
+    @include mediaQuery(600px) {
         .rules_title .title {
             font-size: 1.1rem;
             font-weight: 500;
@@ -79,7 +130,7 @@ header {
 .quiz_box {
     @include quiz_box;
 
-    @include mediaQuery(800px) {
+    @include mediaQuery(768px) {
         width: 430px;
 
         .question {
@@ -88,7 +139,7 @@ header {
 
         .option {
             font-size: 16px;
-            width: 400px;
+            width: 380px;
             touch-action: manipulation;
         }
 
@@ -103,7 +154,7 @@ header {
             font-size: 1rem;
             padding: 1rem;
             position: absolute;
-            left: 65%;
+            left: 62%;
         }
 
         .correct {
@@ -117,7 +168,7 @@ header {
         }
     }
 
-    @include mediaQuery(500px) {
+    @include mediaQuery(600px) {
         width: 380px;
 
         .question {
@@ -126,7 +177,7 @@ header {
 
         .option {
             font-size: 16px;
-            width: 350px;
+            width: 330px;
             touch-action: manipulation;
         }
 

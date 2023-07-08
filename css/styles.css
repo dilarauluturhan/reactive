@@ -24,7 +24,7 @@ i {
   display: none;
 }
 
-.warning_box {
+body .warning_box {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
@@ -53,14 +53,65 @@ i {
   border-bottom-right-radius: 225px 15px;
   border-top-left-radius: 255px 15px;
   border-top-right-radius: 15px 225px;
-  position: absolute;
-  left: 34%;
-  top: 19%;
+  position: fixed;
+  left: 46%;
+  top: 15%;
+  -webkit-transform: translate(-5%, -20%);
+          transform: translate(-5%, -20%);
   display: none;
 }
-
-.show {
+body .show {
   display: block;
+}
+@media screen and (max-width: 1500px) {
+  body .warning_box {
+    position: fixed;
+    left: 45%;
+    top: 15%;
+    -webkit-transform: translate(-5%, -20%);
+            transform: translate(-5%, -20%);
+  }
+}
+@media screen and (max-width: 1400px) {
+  body .warning_box {
+    position: fixed;
+    left: 45%;
+    top: 15%;
+    -webkit-transform: translate(-7%, -20%);
+            transform: translate(-7%, -20%);
+  }
+}
+@media screen and (max-width: 1150px) {
+  body .warning_box {
+    position: fixed;
+    left: 45%;
+    top: 15%;
+    -webkit-transform: translate(-15%, -20%);
+            transform: translate(-15%, -20%);
+  }
+}
+@media screen and (max-width: 900px) {
+  body .warning_box {
+    position: fixed;
+    left: 45%;
+    top: 15%;
+    -webkit-transform: translate(-20%, -20%);
+            transform: translate(-20%, -20%);
+  }
+}
+@media screen and (max-width: 768px) {
+  body .warning_box {
+    display: none;
+  }
+}
+@media screen and (max-width: 600px) {
+  body {
+    background-image: none;
+    background-color: #B8E296;
+    background-position: 0 90%;
+    background-repeat: repeat no-repeat;
+    background-size: 4px 3px;
+  }
 }
 
 header {
@@ -112,14 +163,14 @@ header h1 span {
   -ms-touch-action: manipulation;
       touch-action: manipulation;
 }
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 768px) {
   header h1 span {
     font-size: 2.5rem;
     font-weight: 400;
     padding: 1rem;
   }
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 600px) {
   header h1 span {
     font-size: 2.5rem;
     font-weight: 400;
@@ -280,7 +331,7 @@ header h1 span {
   -webkit-box-shadow: rgba(0, 0, 0, 0.3) 2px 8px 4px -6px;
           box-shadow: rgba(0, 0, 0, 0.3) 2px 8px 4px -6px;
 }
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 768px) {
   .rules_box .rules_title .title {
     font-size: 1.2rem;
     font-weight: 500;
@@ -294,7 +345,7 @@ header h1 span {
     font-weight: 400;
   }
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 600px) {
   .rules_box .rules_title .title {
     font-size: 1.1rem;
     font-weight: 500;
@@ -469,7 +520,7 @@ header h1 span {
   -webkit-box-shadow: rgba(0, 0, 0, 0.3) 2px 8px 4px -6px;
           box-shadow: rgba(0, 0, 0, 0.3) 2px 8px 4px -6px;
 }
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 768px) {
   .quiz_box {
     width: 430px;
   }
@@ -478,7 +529,7 @@ header h1 span {
   }
   .quiz_box .option {
     font-size: 16px;
-    width: 400px;
+    width: 380px;
     -ms-touch-action: manipulation;
         touch-action: manipulation;
   }
@@ -492,7 +543,7 @@ header h1 span {
     font-size: 1rem;
     padding: 1rem;
     position: absolute;
-    left: 65%;
+    left: 62%;
   }
   .quiz_box .correct {
     color: #FEF9E5;
@@ -503,7 +554,7 @@ header h1 span {
     background-color: #B31312;
   }
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 600px) {
   .quiz_box {
     width: 380px;
   }
@@ -512,7 +563,7 @@ header h1 span {
   }
   .quiz_box .option {
     font-size: 16px;
-    width: 350px;
+    width: 330px;
     -ms-touch-action: manipulation;
         touch-action: manipulation;
   }
