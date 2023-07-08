@@ -106,9 +106,10 @@ header {
 
     @include mediaQuery(600px) {
         .rules_title .title {
-            font-size: 1.1rem;
+            font-size: 1rem;
             font-weight: 500;
-            padding: 0.9rem;
+            padding: 0.6rem;
+            margin-top: 0.7rem;
         }
 
         .rules_list {
