@@ -333,9 +333,6 @@ header h1 span {
   position: relative;
   overflow: hidden;
 }
-.quiz_box .option:hover {
-  background-color: #FEF9E5;
-}
 .quiz_box .correct {
   color: #FEF9E5;
   background-color: #0A6EBD;
