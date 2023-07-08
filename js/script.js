@@ -32,7 +32,6 @@ function getNewQuestion() {
         availableOptions.push(i); // availableOptions'a şıkların indeksini ekler
     }
 
-    // const optionLength = currentQuestion.options.length; // mevcut sorunun seçeneklerinin uzunluğunu atar
     optionList.innerHTML = ''; // elementin içeriğini temizler yani önceki sorunun şıklarını kaldırır
 
     // for döngüsü mevcut sorunun seçeneklerini tek tek döner
@@ -74,15 +73,10 @@ function getResult(element) {
         }
     }
     attempt++; // çözülen soru sayısı birer artar
-    unclickableOptions(); // şıklara bir kere tıkladıktan sonra diğerlerini tıklanamaz hale getirir
+    
 }
 
-function unclickableOptions() {
-    const optionLength = optionList.children.length; // şıkların sayısını optionLength'e atar
-    for (let i = 0; i < optionLength; i++) {
-        optionList.children[i].classList.add("alreadyAnswered")
-    }
-}
+
 
 // bu fonksiyon bir önceki soruya getirir
 function back() {
