@@ -21,16 +21,18 @@ function setAvailableQuestions() {
 }
 
 function getNewQuestion() {
-    //  mevcut soru sayısının mevcut soru listesinin length'ine eşit veya büyük olduğunu kontrol eder, böylece quizOver fonksiyonunu çağırıp fonksiyondan çıkar
-    if (questionCounter >= availableQuestions.length) {
-        quizOver();
-        return;
+    const questionIndex = availableQuestions[Math.floor(Math.random() * availableQuestions.length)]; // rastgele soru gelmesi için rastgele bir indeks alır
+    currentQuestion = questionIndex; // seçilen soruyu currentQuestion'a atar
+    questionText.innerHTML = currentQuestion.question; // questionText'i currentQuestion'ın question'ıyla günceller
+    const index1 = availableQuestions.indexOf(questionIndex); // availableQuestions dizisinde seçilen sorunun indeksini bulur ve index1 değişkenine atar
+    availableQuestions.splice(index1, 1); // availableQuestions dizisinden seçilen soruyu çıkarır
+    const optionLength = currentQuestion.options.length; // Seçilen sorunun seçeneklerinin length'ini optionLength değişkenine atar
+
+    for (let i = 0; i < optionLength; i++) {
+        availableOptions.push(i); // availableOptions'a şıkların indeksini ekler
     }
 
-    currentQuestion = availableQuestions[questionCounter]; // mevcut soruyu belirler
-    questionText.innerHTML = currentQuestion.question; // questionText'in içeriğini mevcut sorunun metnini içerecek şekilde günceller
-
-    const optionLength = currentQuestion.options.length; // mevcut sorunun seçeneklerinin uzunluğunu atar
+    // const optionLength = currentQuestion.options.length; // mevcut sorunun seçeneklerinin uzunluğunu atar
     optionList.innerHTML = ''; // elementin içeriğini temizler yani önceki sorunun şıklarını kaldırır
 
     // for döngüsü mevcut sorunun seçeneklerini tek tek döner
@@ -45,6 +47,7 @@ function getNewQuestion() {
 
     questionCounter++; // mevcut sorunun sayacını bir arttırır
 
+    // Level warning box
     const warnBox = document.querySelector('#warningBox');
     if (currentQuestion.level) {
         warnBox.textContent = currentQuestion.level + " Level";
