@@ -40,7 +40,7 @@
 
 @mixin rules_box {
     position: absolute;
-    top: 50%;
+    top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
 
@@ -83,17 +83,34 @@
     }
 
     .rules_list {
-        width: 800px;
-        background: $cream;
-        border: none;
-        border-radius: 5px;
+        width: 600px;
+        background-image: none;
+        background-color: $cream;
+        background-position: 0 90%;
+        background-repeat: repeat no-repeat;
+        background-size: 4px 3px;
+        border-radius: 15px 225px 255px 15px 15px 255px 225px 15px;
+        border-style: solid;
+        border-width: 2px;
+        box-shadow: rgba(0, 0, 0, .2) 15px 28px 25px -18px;
+        box-sizing: border-box;
+        color: $textColor;
+        display: inline-block;
+        transition: all 235ms ease-in-out;
+        border-bottom-left-radius: 15px 255px;
+        border-bottom-right-radius: 225px 15px;
+        border-top-left-radius: 255px 15px;
+        border-top-right-radius: 15px 225px;
+        user-select: none;
+        -webkit-user-select: none;
+        touch-action: manipulation;
         padding: 15px 35px;
         margin-top: 12px;
     }
 
     .rules_list .rules {
         margin: 5px 0;
-        font-size: 17px;
+        font-size: 20px;
     }
 
     .buttons {
